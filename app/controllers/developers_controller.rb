@@ -13,6 +13,7 @@ class DevelopersController < ApplicationController
     
     def create
         dev = Developer.create!(dev_params)
+        render json: dev, status: :created
     end
 
     def update

@@ -11,7 +11,7 @@ const [user, setUser] = useState(null);
 const [reviewList, setReviewList] = useState([])
 
 useEffect(()=>{
-  fetch("http://localhost:3000/reviews")
+  fetch("/reviews")
   .then(response => response.json())
   .then(data => setReviewList(data))
 }, [])
@@ -19,7 +19,7 @@ useEffect(()=>{
 
 useEffect(() => {
   // auto-login
-  fetch("http://localhost:3000/me").then((r) => {
+  fetch("/me").then((r) => {
     if (r.ok) {
       r.json().then((user) => setUser(user));
     }

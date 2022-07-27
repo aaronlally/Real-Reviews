@@ -6,7 +6,7 @@ function ReviewCard({ review }) {
 return (
     <div>
         <h1>Review</h1>
-        <h2>{review.game}</h2>
+        <h2>{review.game.name}</h2>
     </div>
 )
 

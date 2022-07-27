@@ -14,11 +14,11 @@ function SignUpForm({ setUser }) {
     e.preventDefault();
     // setErrors([]);
     setIsLoading(true);
-    fetch("http://localhost:3000/signup", {
+    fetch("/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        'Access-Control-Allow-Origin' : 'http://localhost:3000',
+        "Accept": "application/json"
       },
       body: JSON.stringify({
         first_name: firstName,
