@@ -29,10 +29,10 @@ function NavBar({ user, setUser }) {
                 <NavLink exact className="button" to="/reviews">
                     <button onClick={handleClick} className={active === "reviews" ? "active" : ""} value="Reviews">Reviews</button>
                 </NavLink>
-                <NavLink exact className="button" to="/bikeride/new">
-                    <button onClick={handleClick} className={active === "games" ? "active" : ""} value="Games">Games</button>
+                <NavLink exact className="button" to="/reviews/new">
+                    <button onClick={handleClick} className={active === "new" ? "active" : ""} value="newReview">New Review</button>
                 </NavLink>
-                <NavLink className="butt" to="/">
+                <NavLink className="button" to="/">
                     <button className="logout" id="logoutButton" onClick={handleClick} value="logout">{user ? "Logout" : "Login"}</button>
                 </NavLink>
             </nav>
