@@ -21,6 +21,8 @@ act = Developer.create(name: "Activision", founding_year: 1979)
 epic = Developer.create(name: "Epic Games", founding_year: 1991)
 nintendo = Developer.create(name: "Nintendo", founding_year: 1889)
 insom = Developer.create(name: "Insomniac Games", founding_year: 1994)
+independent = Developer.create(name: "Independent Developer", founding_year: 0)
+other = Developer.create(name: "Other", founding_year: 0)
 
 
 
@@ -42,13 +44,13 @@ game8 = Game.create!(name: Faker::Game.title, release_year: rand(1980..2022), ge
 
 
 
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game1.id, date: "1/1/2022")
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game2.id, date: "1/1/2022")
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game3.id, date: "1/1/2022")
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game4.id, date: "1/1/2022")
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game5.id, date: "1/1/2022")
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game6.id, date: "1/1/2022")
-Review.create(title: "seeded review", content: "seeded review content", user_id: rand(131..141), game_id: game7.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game1.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game2.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game3.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game4.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game5.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game6.id, date: "1/1/2022")
+Review.create(title: "seeded review", content: "seeded review content", user_id: rand(164..173), game_id: game7.id, date: "1/1/2022")
 
 
 

@@ -4,17 +4,19 @@ import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
+import GameContainer from "./GameContainer"
+import DevContainer from "./DevContainer"
 
 function App() {
 
 const [user, setUser] = useState(null);
-const [reviewList, setReviewList] = useState([])
+// const [reviewList, setReviewList] = useState([])
 
-useEffect(()=>{
-  fetch("/reviews")
-  .then(response => response.json())
-  .then(data => setReviewList(data))
-}, [])
+// useEffect(()=>{
+//   fetch("/reviews")
+//   .then(response => response.json())
+//   .then(data => setReviewList(data))
+// }, [])
 
 
 useEffect(() => {
@@ -37,7 +39,13 @@ if (!user) return <Login setUser={setUser} />;
             <Login setUser={setUser}/>
         </Route>
         <Route exact path="/">
-            <Home reviewList={reviewList} setReviewList={setReviewList}/>
+            <Home />
+        </Route>
+        <Route exact path="/games">
+            <GameContainer />
+        </Route>
+        <Route exact path="/devs">
+            <DevContainer />
         </Route>
       </Switch>
     </div>
