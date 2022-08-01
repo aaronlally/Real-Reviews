@@ -33,7 +33,7 @@ function NavBar({ user, setUser }) {
                 <NavLink exact className="button" to="/devs">
                     <button onClick={handleClick} className={active === "dev" ? "active" : ""} value="devs">Developers</button>
                 </NavLink>
-                 <NavLink exact className="button" to="/view/new">
+                 <NavLink exact className="button" to="/new">
                     <button onClick={handleClick} className={active === "new" ? "active" : ""} value="new">Add review/game</button>
                 </NavLink>
                 <NavLink exact className="button" to="/profile">
