@@ -4,8 +4,9 @@ import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
-import GameContainer from "./GameContainer"
-import DevContainer from "./DevContainer"
+import GameContainer from "./GameContainer";
+import DevContainer from "./DevContainer";
+import Profile from "./Profile";
 
 function App() {
 
@@ -46,6 +47,9 @@ if (!user) return <Login setUser={setUser} />;
         </Route>
         <Route exact path="/devs">
             <DevContainer />
+        </Route>
+        <Route exact path="/profile">
+            <Profile user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>

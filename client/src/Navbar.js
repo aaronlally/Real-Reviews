@@ -36,6 +36,9 @@ function NavBar({ user, setUser }) {
                  <NavLink exact className="button" to="/view/new">
                     <button onClick={handleClick} className={active === "new" ? "active" : ""} value="new">Add review/game</button>
                 </NavLink>
+                <NavLink exact className="button" to="/profile">
+                    <button onClick={handleClick} className={active === "new" ? "active" : ""} value="profile">Profile</button>
+                </NavLink>
                 <NavLink className="button" to="/">
                     <button className="logout" id="logoutButton" onClick={handleClick} value="logout">{user ? "Logout" : "Login"}</button>
                 </NavLink>
