@@ -5,6 +5,7 @@ function GameCard({ game }) {
 
 return (
     <div>
+        <img alt="game" src={game.image} ></img>
         <h1>{game.name}</h1>
         <h2>{game.developer.name}</h2>
         <h3>{game.release_year}</h3>

@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import GameCard from "./GameCard";
 
-function GameContainer() {
-
-const [gameList, setGameList] = useState([])
-
-useEffect(()=>{
-    fetch("/games")
-    .then(response => response.json())
-    .then(data => setGameList(data))
-  }, [gameList.length])
+function GameContainer({ gameList }) {
 
   const renderGames = gameList.map((game)=> {
     return <GameCard key={game.id} game={game}/>
