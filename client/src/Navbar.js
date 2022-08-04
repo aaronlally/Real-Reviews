@@ -24,25 +24,23 @@ function NavBar({ user, setUser }) {
         <header>
             <nav id="navBar">
                 <NavLink exact className="button" to="/">
-                    <button onClick={handleClick} className={active === "Home" ? "active" : ""} value="Home">Home</button>
+                    <button onClick={handleClick} className={active === "Home" ? "active" : "other"} value="Home">Home</button>
                 </NavLink>
                 <NavLink exact className="button" to="/games">
-                    <button onClick={handleClick} className={active === "games" ? "active" : ""} value="games">Games</button>
+                    <button onClick={handleClick} className={active === "games" ? "active" : "other"} value="games">Games</button>
                 </NavLink>
-                
                 <NavLink exact className="button" to="/devs">
-                    <button onClick={handleClick} className={active === "dev" ? "active" : ""} value="devs">Developers</button>
+                    <button onClick={handleClick} className={active === "developers" ? "active" : "other"} value="developers">Developers</button>
                 </NavLink>
                  <NavLink exact className="button" to="/new">
-                    <button onClick={handleClick} className={active === "new" ? "active" : ""} value="new">Add review/game</button>
+                    <button onClick={handleClick} className={active === "new" ? "active" : "other"} value="new">Add review/game</button>
                 </NavLink>
                 <NavLink exact className="button" to="/profile">
-                    <button onClick={handleClick} className={active === "new" ? "active" : ""} value="profile">Profile</button>
+                    <button onClick={handleClick} className={active === "profile" ? "active" : "other"} value="profile">Profile</button>
                 </NavLink>
                 <NavLink className="button" to="/">
                     <button className="logout" id="logoutButton" onClick={handleClick} value="logout">{user ? "Logout" : "Login"}</button>
                 </NavLink>
-               
             </nav>
         </header>
     )

@@ -65,7 +65,7 @@ if (!user) return <Login setUser={setUser} />;
             <Login setUser={setUser}/>
         </Route>
         <Route exact path="/">
-            <Home reviewList={reviewList} />
+            <Home user={user} reviewList={reviewList} />
         </Route>
         <Route exact path="/games">
             <GameContainer gameList={gameList}/>

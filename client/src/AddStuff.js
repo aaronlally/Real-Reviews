@@ -158,7 +158,7 @@ return (
 <div>
     <button className="showButton" onClick={showReviewForm}>Add a new review</button> <button onClick={showGameForm} className="showButton" >Add a new game!</button>
 {addReview ? 
-<form onSubmit={handleReviewSubmit}>
+<form id="addFormm" onSubmit={handleReviewSubmit}>
 <label>Title   </label>
     <input onChange={handleTitle} type="text" name="title"  ></input>
     <label>Game   </label>
@@ -168,10 +168,10 @@ return (
    </select>
     <label>Review   </label>
     <input onChange={handleReviewChange} type="text" name="content"></input>
-<button type="submit">Submit</button>
+<button id="submit1" type="submit">Submit</button>
 </form> : null}
 {addGame ? 
-<form onSubmit={handleGameSubmit}>
+<form id="addForm" onSubmit={handleGameSubmit}>
 <label>Title</label>
 <input onChange={handleGameNameChange} type="text" name="name"></input>
 <label>Release Year</label>
@@ -192,7 +192,7 @@ return (
 <select onChange={handleDevelopersChange}>
   <option>Pick a Developer</option>
   {renderDevs}</select>
-  <button type="submit">Submit</button>
+  <button id="submit2" type="submit">Submit</button>
 </form> : null}
 </div>
 )

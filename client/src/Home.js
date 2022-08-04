@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReviewCard from "./ReviewCard"
 
-function Home({ reviewList }) {
+function Home({ reviewList, user }) {
 
     // const [reviewList, setReviewList] = useState([])
     
@@ -17,12 +17,12 @@ function Home({ reviewList }) {
     // }
 
     const renderReviews = reviewList.map((review) => {
-        return <ReviewCard key={review.id} review={review}/>
+        return <ReviewCard key={review.id} review={review} user={user}/>
     })
 
 
     return (
-        <div>
+        <div id="background">
             <center>{renderReviews}</center>
         </div>
     )

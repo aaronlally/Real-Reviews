@@ -7,7 +7,6 @@ function GameContainer({ gameList }) {
     return <GameCard key={game.id} game={game}/>
 })
 
-
 return (
     <div>
         <center>{renderGames}</center>

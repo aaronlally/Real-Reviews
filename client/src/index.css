@@ -1,0 +1,179 @@
+#reviewCard {
+    margin: auto;
+    margin-top: 2%;
+    width: 400px;
+    height: auto;
+    padding-top: 10px;
+    border-color: rgb(178, 197, 204);
+    background: rgb(231, 230, 227);
+    border-style:ridge;
+    border-radius: 5%;
+    color: rgb(68, 67, 67);
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#gameName {
+    font-size:xx-large;
+    padding: 10px;
+    margin: auto;
+}
+.reviewButtons {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    size: 4em;
+    width: 4em;
+    font-size: 22px;
+    border-color: rgb(240, 237, 234);
+}
+
+.reviewButtons:hover {
+    transform: scale(1.22);
+    transition: transform .9s;
+}
+
+/* #app {
+    background-color: tan;
+} */
+
+.active {
+    background-color: rgb(154, 187, 231);
+    border-style: none;
+
+  }
+
+ .other {
+    border-style: none;
+ }
+
+ #logoutButton {
+    border-style: none;
+ }
+
+ #reviewcardGame {
+    height: 400px;
+    width: 300px;
+ }
+
+ #reviewcardGame:hover {
+    transform: scale(1.22);
+    transition: transform .9s;
+ }
+
+ #gameCardImg:hover {
+    transform: scale(1.1);
+    transition: transform .9s;
+ }
+
+#gameCardImg {
+    width:100%;
+    max-width:500px;
+    max-height:500px;
+    padding: 14px;
+}
+
+ .gameEditDelete:hover {
+    transform: scale(1.20);
+    transition: transform .6s;
+    background-color: #c5281d;
+    color: white;
+ }
+
+ .gameEditDelete {
+    height: 35px;
+    width: 35px;
+    background-color: #ddd;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+ }
+
+ .devName {
+    color: red;
+ }
+ #reviewTitle {
+    color: rgb(94, 96, 207);
+ }
+
+ .form {
+    align-items: center;
+    padding: 30px;
+ }
+
+ input {
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+ select {
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+
+ #gameCardName {
+    color: rgb(104, 104, 218);
+ }
+
+ #addFormm {
+    padding: 20px;
+    margin-left: 500px;
+ }
+
+ #addForm {
+    margin-left: 70px;
+    padding: 35px;
+ }
+
+ input[type=text] {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    height: 1em;
+  }
+
+  form button[type="submit"] { 
+    border-color: rgb(50, 52, 143);
+}
+
+#submit1 {
+    display:block;
+    padding:0.7em 1.4em;
+    margin-left: 372px;
+    border-radius:0.15em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#FFFFFF;
+    background-color:#3369ff;
+    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    text-align:center;
+    position:relative;
+}
+#submit2 {
+    display:block;
+    padding:.5em 1.4em;
+    margin-left: 57em;
+    border-radius:0.15em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#FFFFFF;
+    background-color:#3369ff;
+    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    text-align:center;
+    position:relative;
+}
+
+label {
+    padding: 4px;
+}
