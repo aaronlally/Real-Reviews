@@ -22,6 +22,7 @@ function NavBar({ user, setUser }) {
 
     return (
         <header>
+            <p className="mastHead">Real Reviews</p>
             <nav id="navBar">
                 <NavLink exact className="button" to="/">
                     <button onClick={handleClick} className={active === "Home" ? "active" : "other"} value="Home">Home</button>

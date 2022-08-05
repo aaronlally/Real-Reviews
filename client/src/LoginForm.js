@@ -38,7 +38,7 @@ function LoginForm({ setUser }) {
           onChange={(e) => setUsername(e.target.value)}
         />
         <br/>
-        <label htmlFor="password">Password</label>
+        <label id="pass" htmlFor="password">Password</label>
         <input
           type="password"
           id="password"
@@ -47,7 +47,7 @@ function LoginForm({ setUser }) {
           onChange={(e) => setPassword(e.target.value)}
         />
         <br/>
-        <button variant="fill" color="primary" type="submit">
+        <button id="loginButton" variant="fill" color="primary" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </button>
         {errors.map((err) => (

@@ -156,7 +156,7 @@ function handleImage(e) {
 
 return (
 <div>
-    <button className="showButton" onClick={showReviewForm}>Add a new review</button> <button onClick={showGameForm} className="showButton" >Add a new game!</button>
+    <button className="showButton" onClick={showReviewForm}>Add a new review</button>
 {addReview ? 
 <form id="addFormm" onSubmit={handleReviewSubmit}>
 <label>Title   </label>
@@ -168,8 +168,9 @@ return (
    </select>
     <label>Review   </label>
     <input onChange={handleReviewChange} type="text" name="content"></input>
-<button id="submit1" type="submit">Submit</button>
+  <button id="submit1" type="submit">Submit</button>
 </form> : null}
+<button onClick={showGameForm} className="showButton1" >Add a new game!</button>
 {addGame ? 
 <form id="addForm" onSubmit={handleGameSubmit}>
 <label>Title</label>

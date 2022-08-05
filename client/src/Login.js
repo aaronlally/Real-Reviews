@@ -14,7 +14,7 @@ function Login({ setUser }) {
           <br />
           <center>
             Don't have an account? &nbsp;
-            <button onClick={() => setShowLogin(false)}>
+            <button id="signUp" onClick={() => setShowLogin(false)}>
               Sign Up
             </button>
           </center>
