@@ -25,7 +25,7 @@ function NavBar({ user, setUser }) {
             <p className="mastHead">Real Reviews</p>
             <nav id="navBar">
                 <NavLink exact className="button" to="/">
-                    <button onClick={handleClick} className={active === "Home" ? "active" : "other"} value="Home">Home</button>
+                    <button onClick={handleClick} className={active === "Home" ? "active" : "other"} value="Home">Reviews</button>
                 </NavLink>
                 <NavLink exact className="button" to="/games">
                     <button onClick={handleClick} className={active === "games" ? "active" : "other"} value="games">Games</button>
@@ -34,7 +34,7 @@ function NavBar({ user, setUser }) {
                     <button onClick={handleClick} className={active === "developers" ? "active" : "other"} value="developers">Developers</button>
                 </NavLink>
                  <NavLink exact className="button" to="/new">
-                    <button onClick={handleClick} className={active === "new" ? "active" : "other"} value="new">Add review/game</button>
+                    <button onClick={handleClick} className={active === "new" ? "active" : "other"} value="new">Create</button>
                 </NavLink>
                 <NavLink exact className="button" to="/profile">
                     <button onClick={handleClick} className={active === "profile" ? "active" : "other"} value="profile">Profile</button>

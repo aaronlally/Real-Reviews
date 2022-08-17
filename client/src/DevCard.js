@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import {useHistory} from "react-router-dom";
 
 function DevCard({ dev }) {
 
     const history = useHistory()
+    const [showEditDev, setShowEditDev] = useState(false)
+
+    const [devName, setDevName] = useState("")
+    const  [devYear, setDevYear] = useState()
 
 const renderGames = dev.games.map((game) => {
     return <h3 key={game.id}>{game.name}</h3>
 })
+
+function handleEditDev() {
+setShowEditDev(prevState => !prevState)
+}
 
 function handleDevDelete(e) {
     e.preventDefault()
@@ -18,13 +26,44 @@ function handleDevDelete(e) {
       });
 }
 
+function handleSubmitEditDev() {
+    fetch(`/developers/${dev.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: devName,
+            founding_year: devYear
+        }),
+        }).then((r) => {
+          r.json().then((review) => console.log(review));
+        });
+}
+
+function handleEditDevName(e) {
+    setDevName(e.target.value)
+}
+
+function handleEditDevYear(e) {
+setDevYear(e.target.value)
+}
+
 return (
     <div>
         <h1>{dev.name}</h1>
         <h2>{dev.founding_year}</h2>
         <div>{renderGames}</div>
+        <button id="devCardEdit" className="devEdit" onClick={handleEditDev} >✏️</button>
         <form onSubmit={handleDevDelete}><button id="devCardDelete" className="gameEditDelete" type="submit">🗑️</button>
         </form>
+        {showEditDev ? <form onSubmit={handleSubmitEditDev}>
+            <label>Name</label>
+            <input onChange={handleEditDevName} type="text"></input>
+            <label>Founding Year</label>
+            <input onChange={handleEditDevYear} type="number"></input>
+            <button type="submit">Submit</button>
+        </form> : null}
     </div>
 )
 
