@@ -49,11 +49,14 @@ function Profile({ user, setUser }) {
 
     return (
         <div id="profile">
-            <h1>Profile</h1>
-            <h2>Username: {user.username}</h2>
-            <h2>First name {user.first_name}</h2>
-            <h2>Last name {user.last_name}</h2>
-            <button className="profileButtons" onClick={handleUpdateUser}>Edit account</button> <button className="profileButtons" onClick={handleDeleteUser}>Delete account</button>
+            <center id="profilee">Profile</center>
+            <h2 id="usaname">Username:</h2>
+            <h2 id="usersname">{user.username}</h2>
+            <h2 id="firstname">First name</h2>
+            <h2 id="firstName">{user.first_name}</h2>
+            <h2 id="lastname">Last Name</h2>
+            <h2 id="lastName">{user.last_name}</h2>
+            <button className="profileButtons" id="profileb2" onClick={handleUpdateUser}>Edit account</button> <button id="profileb1" className="profileButtons" onClick={handleDeleteUser}>Delete account</button>
             {updateForm ? 
       <form onSubmit={handleSubmitUpdateUser}>
       <label htmlFor="first_name">* First Name</label>

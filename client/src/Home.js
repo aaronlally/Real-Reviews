@@ -23,6 +23,7 @@ function Home({ reviewList, user }) {
 
     return (
         <div id="background">
+            <center id="ReviewTitleCard">Reviews</center>
             <center>{renderReviews}</center>
         </div>
     )
