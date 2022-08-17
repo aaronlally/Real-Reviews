@@ -63,30 +63,27 @@ function handleUpdateReview() {
 
 function handleGameChange(e) {
 setGameId(e.target.value)
-console.log(e.target.value)
 }
 
 function handleTitle(e) {
 setTitle(e.target.value)
-console.log(e.target.value)
 }
 
 function handleReviewChange(e) {
     setContent(e.target.value)
-    console.log(e.target.value)
 }
 
 
 return (
     <div id="reviewCard" >
+        <div>
         <h1 id="gameName" >{review.game.name}</h1>
         <h2 id="reviewTitle">{review.title}</h2>
         <h3>{review.content}</h3>
         <h4>{review.date}</h4>
         <img id="reviewcardGame" alt="game" src={review.game.image} ></img>
-        <button className="reviewButtons" onClick={handleChangeEditReview} >✏️</button>
-        <form onSubmit={handleReviewDelete}>
-        <button className="reviewButtons" type="submit">🗑️</button>
+        </div>
+        <button id="reviewCardEdit" className="gameEditDelete" onClick={handleChangeEditReview} >✏️</button><form onSubmit={handleReviewDelete}><button id="reviewCardDelete" className="gameEditDelete" type="submit">🗑️</button>
         </form>
         {editReviewChanger ? 
         <form onSubmit={handleUpdateReview}>

@@ -29,7 +29,7 @@ class DevelopersController < ApplicationController
     private
 
     def find_dev
-        @dev = Dev.find(params[:id])
+        @dev = Developer.find(params[:id])
     end
     
     def dev_params

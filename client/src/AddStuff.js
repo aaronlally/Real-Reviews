@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {useHistory} from "react-router-dom";
 
-function AddStuff({ user, handleAddReview, handleAddGame }) {
+function AddStuff({ user, handleAddReview, handleAddGame, handleAddDeveloper }) {
 
     const [addReview, setAddReview] = useState(false)
     const [addGame, setAddGame] = useState(false)
@@ -18,6 +18,9 @@ function AddStuff({ user, handleAddReview, handleAddGame }) {
     const [gameImage, setGameImage] = useState("")
     const [gamePlatform, setGamePlatform] = useState("")
     const [gameDev, setGameDev] = useState()
+    const [addDev, setAddDev] = useState(false)
+    const [devName, setDevName] = useState("")
+    const [devYear, setDevYear] = useState()
 
 
     useEffect(()=>{
@@ -154,6 +157,38 @@ function handleImage(e) {
   console.log(e.target.value)
 }
 
+function handleAddDev() {
+  setAddDev(prevState => !prevState)
+}
+
+function handleDevName(e) {
+  setDevName(e.target.value)
+}
+
+function handleDevYear(e) {
+  setDevYear(e.target.value)
+}
+
+function handleSubmitDeveloper(e) {
+  e.preventDefault()
+  fetch("/developers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: devName,
+        founding_year: devYear
+      }),
+    }).then((r) => {
+      r.json().then((newDev) => {
+        handleAddDeveloper(newDev);
+        handleAddDev();
+        history.push("/devs")
+      });
+    });
+}
+
 return (
 <div>
     <button className="showButton" onClick={showReviewForm}>Add a new review</button>
@@ -195,6 +230,15 @@ return (
   {renderDevs}</select>
   <button id="submit2" type="submit">Submit</button>
 </form> : null}
+<button onClick={handleAddDev}>Add a new Developer</button>
+{addDev ? <form onSubmit={handleSubmitDeveloper}>
+<label>Name</label>
+<input type="text" onChange={handleDevName}></input>
+<label>Founding Year</label>
+<input type="number" onChange={handleDevYear}></input>
+<button type="submit">Submit</button>
+</form> : null}
+
 </div>
 )
 

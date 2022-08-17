@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DevCard from "./DevCard";
 
-function DevContainer() {
+function DevContainer({ devList }) {
 
-const [devList, setDevList] = useState([])
 
-useEffect(()=>{
-    fetch("/developers")
-    .then(response => response.json())
-    .then(data => setDevList(data))
-  }, [devList.length])
+
 
   const renderDevs = devList.map((dev) => {
     return <DevCard key={dev.id} dev={dev}/>

@@ -105,7 +105,7 @@ return (
         <h2 className="devName">{game.developer.name}</h2>
         <h3>{game.release_year}</h3>
         <h4>{game.multiplayer ? "multiplayer" : "single-player"}</h4>
-        <button className="gameEditDelete" onClick={handleClick}>✏️</button>
+        <button id="gameCardEditButton" className="gameEditDelete" onClick={handleClick}>✏️</button>
         {editGameButton ? 
         <form className="form" onSubmit={handleUpdateGame}>
             <label>Title</label>
@@ -131,7 +131,7 @@ return (
   <button type="submit">Submit</button>
 </form> : null}
 <form onSubmit={handleDeleteGame}>
-<button className="gameEditDelete" type="submit">🗑️</button>
+<button id="gameCardDeleteButton" className="gameEditDelete" type="submit">🗑️</button>
 </form>
     </div>
 )

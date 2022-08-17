@@ -14,6 +14,13 @@ function App() {
 const [user, setUser] = useState(null);
 const [reviewList, setReviewList] = useState([])
 const [gameList, setGameList] = useState([])
+const [devList, setDevList] = useState([])
+
+useEffect(()=>{
+  fetch("/developers")
+  .then(response => response.json())
+  .then(data => setDevList(data))
+}, [devList.length])
 
 useEffect(()=>{
     fetch("/games")
@@ -56,6 +63,10 @@ useEffect(() => {
 
 if (!user) return <Login setUser={setUser} />;
 
+function handleAddDeveloper(newDev) {
+setDevList([...devList, newDev])
+}
+
 
   return (
     <div className="App">
@@ -71,13 +82,13 @@ if (!user) return <Login setUser={setUser} />;
             <GameContainer gameList={gameList}/>
         </Route>
         <Route exact path="/devs">
-            <DevContainer />
+            <DevContainer devList={devList}/>
         </Route>
         <Route exact path="/profile">
             <Profile user={user} setUser={setUser} />
         </Route>
         <Route exact path="/new">
-            <AddStuff handleAddGame={handleAddGame} handleAddReview={handleAddReview} user={user}/>
+            <AddStuff handleAddDeveloper={handleAddDeveloper} handleAddGame={handleAddGame} handleAddReview={handleAddReview} user={user}/>
         </Route>
       </Switch>
     </div>
