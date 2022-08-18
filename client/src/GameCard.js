@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {useHistory} from "react-router-dom";
+import EditPopUp from "./EditPopUp"
+import DeletePopUp from "./DeletePopUp"
 
 function GameCard({ game }) {
 
@@ -14,6 +16,8 @@ function GameCard({ game }) {
     const [devs, setDevs] = useState([])
     const [currentGame, setCurrentGame] = useState(game)
     const history = useHistory()
+    const [isShown, setIsShown] = useState(false)
+    const [isShownnn, setIsShownnn] = useState(false)
 
 
     useEffect(()=>{
@@ -105,7 +109,12 @@ return (
         <h2 className="devName">{game.developer.name}</h2>
         <h3>{game.release_year}</h3>
         <h4>{game.multiplayer ? "multiplayer" : "single-player"}</h4>
-        <button id="gameCardEditButton" className="gameEditDelete" onClick={handleClick}>✏️</button>
+        <button 
+        id="gameCardEditButton" 
+        className="gameEditDelete"
+        onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}
+        onClick={handleClick}>✏️</button>
         {editGameButton ? 
         <form className="form" onSubmit={handleUpdateGame}>
             <label>Title</label>
@@ -131,8 +140,15 @@ return (
   <button type="submit">Submit</button>
 </form> : null}
 <form onSubmit={handleDeleteGame}>
-<button id="gameCardDeleteButton" className="gameEditDelete" type="submit">🗑️</button>
+<button 
+  id="gameCardDeleteButton" 
+  className="gameEditDelete" 
+  onMouseEnter={() => setIsShownnn(true)}
+  onMouseLeave={() => setIsShownnn(false)}
+type="submit">🗑️</button>
 </form>
+{isShown ? <EditPopUp /> : null}
+{isShownnn ? <DeletePopUp /> : null}
     </div>
 )
 

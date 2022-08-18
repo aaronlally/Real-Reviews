@@ -20,7 +20,7 @@
 }
 
 #navBar {
-   margin-top: -3%;
+   margin-top: -3.5vw;
    margin-bottom: 3%;
    padding-top: 3%;
    padding-bottom: 3%;
@@ -216,8 +216,8 @@ body {
 #profilee {
    background-color: rgb(255, 255, 255);
    border-style:ridge;
-   margin-left: 35%;
-   margin-right: 50%;
+   margin-left: 30vw;
+   margin-right: 45vw;
    margin-top: -6%;
    margin-bottom: 10%;
    font-size:xx-large;
@@ -231,7 +231,7 @@ body {
 }
 
 #profileb2 {
-   margin-left: 32.2%;
+   margin-left: 31.2%;
 }
 
 #profileb1 {
@@ -240,14 +240,16 @@ margin-left: 1%;
 
 #usersname {
    margin-bottom: 5%;
-   margin-left: 39.2%;
+   margin-left: 38.3%;
+   color: red;
 }
 #usaname {
-   margin-left: 39%;
+   margin-left: 38.1%;
 }
 
 #firstName {
-
+   margin-left: .8vw;
+   color: red;
 }
 
 #firstname {
@@ -255,14 +257,41 @@ margin-left: 1%;
 }
 
 #lastname {
-   margin-left: 82%;
+   margin-left: 70vw;
    margin-top: -6.3%;
 }
 
 #lastName {
-   margin-left: 82%;
+   margin-left: 71.5vw;
+   color: red;
 }
 
 #ReviewTitleCard {
+   background-color: rgb(255, 255, 255);
+   border-style:ridge;
+   margin-left: 34%;
+   margin-right: 35%;
+   margin-top: -6%;
+   margin-bottom: 10%;
+   font-size:xx-large;
+   font-weight:bold;
+   background-color: rgb(67, 67, 100);
+   color: white;
+}
 
+#gameTitleCard {
+   background-color: rgb(255, 255, 255);
+   border-style:ridge;
+   margin-left: 32.5%;
+   margin-right: 35%;
+   margin-top: -2%;
+   margin-bottom: 4%;
+   font-size:xx-large;
+   font-weight:bold;
+   background-color: rgb(67, 67, 100);
+   color: white;
+}
+
+#gamerCard {
+   margin-left: -1.9vw;
 }

@@ -9,7 +9,8 @@ function GameContainer({ gameList }) {
 
 return (
     <div>
-        <center>{renderGames}</center>
+        <center id="gameTitleCard">Games</center>
+        <center id="gamerCard">{renderGames}</center>
     </div>
 )
 }
