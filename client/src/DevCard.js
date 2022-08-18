@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom";
+import EditPopUp from "./EditPopUp"
+import DeletePopUp from "./DeletePopUp"
 
 function DevCard({ dev }) {
 
@@ -7,7 +9,9 @@ function DevCard({ dev }) {
     const [showEditDev, setShowEditDev] = useState(false)
 
     const [devName, setDevName] = useState("")
-    const  [devYear, setDevYear] = useState()
+    const [devYear, setDevYear] = useState()
+    const [isShown, setIsShown] = useState(false)
+    const [isShownnn, setIsShownnn] = useState(false)
 
 const renderGames = dev.games.map((game) => {
     return <h3 key={game.id}>{game.name}</h3>
@@ -50,12 +54,14 @@ setDevYear(e.target.value)
 }
 
 return (
-    <div>
+    <div id="devCard">
         <h1>{dev.name}</h1>
         <h2>{dev.founding_year}</h2>
         <div>{renderGames}</div>
-        <button id="devCardEdit" className="devEdit" onClick={handleEditDev} >✏️</button>
-        <form onSubmit={handleDevDelete}><button id="devCardDelete" className="gameEditDelete" type="submit">🗑️</button>
+        <button id="devCardEdit" className="gameEditDelete" onClick={handleEditDev} onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)} >✏️</button>
+        <form onSubmit={handleDevDelete}><button id="devCardDelete" className="gameEditDelete" type="submit" onMouseEnter={() => setIsShownnn(true)}
+  onMouseLeave={() => setIsShownnn(false)} >🗑️</button>
         </form>
         {showEditDev ? <form onSubmit={handleSubmitEditDev}>
             <label>Name</label>
@@ -64,6 +70,8 @@ return (
             <input onChange={handleEditDevYear} type="number"></input>
             <button type="submit">Submit</button>
         </form> : null}
+        {isShown ? <EditPopUp /> : null}
+        {isShownnn ? <DeletePopUp /> : null}
     </div>
 )
 

@@ -191,7 +191,9 @@ function handleSubmitDeveloper(e) {
 
 return (
 <div>
-    <button className="showButton" onClick={showReviewForm}>Add a new review</button>
+  <center id="createMastHead">Creating</center>
+  <center className="addStuff">
+    <button id="review" className="showButton" onClick={showReviewForm}>Add a new review</button>
 {addReview ? 
 <form id="addFormm" onSubmit={handleReviewSubmit}>
 <label>Title   </label>
@@ -205,7 +207,7 @@ return (
     <input onChange={handleReviewChange} type="text" name="content"></input>
   <button id="submit1" type="submit">Submit</button>
 </form> : null}
-<button onClick={showGameForm} className="showButton1" >Add a new game!</button>
+<button id="game" onClick={showGameForm} className="showButton1" >Add a new game!</button>
 {addGame ? 
 <form id="addForm" onSubmit={handleGameSubmit}>
 <label>Title</label>
@@ -231,14 +233,14 @@ return (
   <button id="submit2" type="submit">Submit</button>
 </form> : null}
 <button onClick={handleAddDev}>Add a new Developer</button>
-{addDev ? <form onSubmit={handleSubmitDeveloper}>
+{addDev ? <form id="addDeveloperForm" onSubmit={handleSubmitDeveloper}>
 <label>Name</label>
 <input type="text" onChange={handleDevName}></input>
 <label>Founding Year</label>
 <input type="number" onChange={handleDevYear}></input>
 <button type="submit">Submit</button>
 </form> : null}
-
+</center>
 </div>
 )
 

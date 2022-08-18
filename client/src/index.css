@@ -1,3 +1,17 @@
+input {
+   caret-color: red;
+   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+   border-radius: 20px;
+   box-sizing: border-box;
+   background: #ecf0f3;
+   outline: none;
+}
+
+input::placeholder {
+   color: gray;
+ }
+
+
 #gameName {
    color:rgb(39, 29, 48)
 }
@@ -17,6 +31,7 @@
    border-style:double;
    border-color:rgb(94, 96, 207);
    width: 30em;
+   margin-left: -2.0vw;
 }
 
 #navBar {
@@ -90,6 +105,7 @@ body {
     text-align: center;
     font-size: 16px;
     transition: 0.3s;
+    border-radius: 15%;
  }
 
  .devName {
@@ -161,15 +177,11 @@ body {
    position:relative;
 }
 
-.mastHead {
-   color:rgb(172, 170, 63);
-   font-size:xx-large;
-   margin-top: .2em;
-}
-
 #gameCard {
    border-style: double;
    width: 50em;
+   border-color: blue;
+   margin-left: -.8vw;
 }
 
 #gameCardImg {
@@ -269,10 +281,10 @@ margin-left: 1%;
 #ReviewTitleCard {
    background-color: rgb(255, 255, 255);
    border-style:ridge;
-   margin-left: 34%;
+   margin-left: 32.5%;
    margin-right: 35%;
-   margin-top: -6%;
-   margin-bottom: 10%;
+   margin-top: -2%;
+   margin-bottom: 4%;
    font-size:xx-large;
    font-weight:bold;
    background-color: rgb(67, 67, 100);
@@ -294,4 +306,82 @@ margin-left: 1%;
 
 #gamerCard {
    margin-left: -1.9vw;
+}
+
+#devCardEdit {
+   margin-bottom: .5vw;
+}
+
+#devCard {
+   border-style: double;
+   width: 28vw;
+   height: 18vw;
+   margin-left: -2vw;
+   border-color: blue;
+}
+
+.mastHead {
+   font-weight: bolder;
+   font-size: 1.9vw;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-shadow: 2px 3px rgb(52, 54, 197);
+   background: blue;
+   margin-right: 86.2vw;
+   color: white;
+   margin-left: .3vw;
+   border-radius: 5%;
+}
+
+#devMastHead {
+   background-color: rgb(255, 255, 255);
+   border-style:ridge;
+   margin-left: 32.5%;
+   margin-right: 35%;
+   margin-top: -2%;
+   margin-bottom: 4%;
+   font-size:xx-large;
+   font-weight:bold;
+   background-color: rgb(67, 67, 100);
+   color: white;
+}
+
+#createMastHead {
+   background-color: rgb(255, 255, 255);
+   border-style:ridge;
+   margin-left: 32.5%;
+   margin-right: 35%;
+   margin-top: -2%;
+   margin-bottom: 4%;
+   font-size:xx-large;
+   font-weight:bold;
+   background-color: rgb(67, 67, 100);
+   color: white;
+}
+
+.addStuff {
+   margin-left: -1.8vw;
+}
+
+#review {
+   margin-right: 2vw;
+}
+#game {
+   margin-right: 2vw;
+}
+
+/* add review form */
+#addFormm {
+   margin-top: 5vw;
+   margin-bottom: 5vw;
+}
+
+/* add game form */
+#addForm {
+   margin-top: 5vw;
+   margin-bottom: 5vw;
+}
+
+#addDeveloperForm {
+   margin-top: 5vw;
+   margin-bottom: 5vw;
 }

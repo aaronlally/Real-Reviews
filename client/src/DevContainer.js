@@ -13,6 +13,7 @@ function DevContainer({ devList }) {
 
 return (
     <div>
+        <center id="devMastHead">Developers</center>
         <center>{renderDevs}</center>
     </div>
 )

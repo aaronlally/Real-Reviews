@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {useHistory} from "react-router-dom";
+import EditPopUp from "./EditPopUp"
+import DeletePopUp from "./DeletePopUp"
 
 function ReviewCard({ review, user }) {
     const [editReviewChanger, setEditReviewChanger] = useState(false)
@@ -7,6 +9,8 @@ function ReviewCard({ review, user }) {
     const [content, setContent] = useState("")
     const [gameId, setGameId] = useState()
     const [games, setGames] = useState([])
+    const [isShown, setIsShown] = useState(false)
+    const [isShownnn, setIsShownnn] = useState(false)
 
 
 const dateObj = new Date();
@@ -83,7 +87,13 @@ return (
         <h4>{review.date}</h4>
         <img id="reviewcardGame" alt="game" src={review.game.image} ></img>
         </div>
-        <button id="reviewCardEdit" className="gameEditDelete" onClick={handleChangeEditReview} >✏️</button><form onSubmit={handleReviewDelete}><button id="reviewCardDelete" className="gameEditDelete" type="submit">🗑️</button>
+        <button 
+        id="reviewCardEdit" 
+        className="gameEditDelete" 
+        onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}
+        onClick={handleChangeEditReview} >✏️</button><form onSubmit={handleReviewDelete}><button id="reviewCardDelete" className="gameEditDelete"  onMouseEnter={() => setIsShownnn(true)}
+        onMouseLeave={() => setIsShownnn(false)} type="submit">🗑️</button>
         </form>
         {editReviewChanger ? 
         <form onSubmit={handleUpdateReview}>
@@ -98,6 +108,8 @@ return (
     <input onChange={handleReviewChange} type="text" name="content"></input>
 <button type="submit">Submit</button>
         </form> : null}
+        {isShown ? <EditPopUp /> : null}
+        {isShownnn ? <DeletePopUp /> : null}
     </div>
 )
 
