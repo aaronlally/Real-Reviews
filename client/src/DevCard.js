@@ -74,7 +74,6 @@ return (
         {isShownnn ? <DeletePopUp /> : null}
     </div>
 )
-
 }
 
 export default DevCard
