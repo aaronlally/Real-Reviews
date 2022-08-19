@@ -11,6 +11,19 @@ function Profile({ user, setUser }) {
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
 
+function renderNoReviews() {
+  if (user.reviews.length === 0) {
+    return <h3 id="noReviews">add reviews and view them here!</h3>
+  }
+  else {
+    return renderReviews
+  }
+}
+  const renderReviews = user.reviews.map((review) => {
+    return (
+      <h3 id="profileReviews" >{review.content}</h3>
+    )
+  })
 
 
     function handleUpdateUser() {
@@ -56,6 +69,7 @@ function Profile({ user, setUser }) {
             <h2 id="firstName">{user.first_name}</h2>
             <h2 id="lastname">Last Name</h2>
             <h2 id="lastName">{user.last_name}</h2>
+            {renderNoReviews()}
             <button className="profileButtons" id="profileb2" onClick={handleUpdateUser}>Edit account</button> <button id="profileb1" className="profileButtons" onClick={handleDeleteUser}>Delete account</button>
             {updateForm ? 
       <form onSubmit={handleSubmitUpdateUser}>
