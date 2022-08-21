@@ -1,5 +1,13 @@
+/* body {
+   background-image: linear-gradient(to right, rgba(243, 14, 212, 0), rgb(64, 107, 248));
+} */
+
 #profileReviews {
-   margin-left: 28vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-right: 16vw;
+ margin-bottom: -6vw;
 }
 
 #noReviews {
@@ -260,11 +268,11 @@ margin-left: 1%;
 
 #usersname {
    margin-bottom: 5%;
-   margin-left: 38.3%;
+   margin-left: 37.3%;
    color: red;
 }
 #usaname {
-   margin-left: 38.1%;
+   margin-left: 37.9%;
 }
 
 #firstName {
@@ -277,12 +285,12 @@ margin-left: 1%;
 }
 
 #lastname {
-   margin-left: 70vw;
-   margin-top: -6.3%;
+   margin-left: 67vw;
+   margin-top: -6.4%;
 }
 
 #lastName {
-   margin-left: 71.5vw;
+   margin-left: 67.6vw;
    color: red;
 }
 
