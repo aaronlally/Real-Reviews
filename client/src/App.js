@@ -43,13 +43,6 @@ useEffect(()=>{
       function handleAddReview(newReview) {
         setReviewList([...reviewList, newReview])
     }
-// const [reviewList, setReviewList] = useState([])
-
-// useEffect(()=>{
-//   fetch("/reviews")
-//   .then(response => response.json())
-//   .then(data => setReviewList(data))
-// }, [])
 
 
 useEffect(() => {

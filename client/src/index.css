@@ -2,14 +2,6 @@
    background-image: linear-gradient(to right, rgba(243, 14, 212, 0), rgb(64, 107, 248));
 } */
 
-#profileReviews {
- display: flex;
- justify-content: center;
- align-items: center;
- margin-right: 16vw;
- margin-bottom: -6vw;
-}
-
 #noReviews {
    margin-left: 32.2vw;
 }
@@ -255,11 +247,11 @@ body {
 }
 
 #profile {
-   margin-left: 10.5%;
+   margin-left: 10.5vw;
 }
 
 #profileb2 {
-   margin-left: 31.2%;
+   margin-left: 27.9vw;
 }
 
 #profileb1 {
@@ -267,31 +259,49 @@ margin-left: 1%;
 }
 
 #usersname {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    margin-bottom: 5%;
-   margin-left: 37.3%;
+   margin-left: 34%;
    color: red;
+   border-style:groove;
+   margin-right: 45vw;
+   border-width: .002vw;
 }
 #usaname {
-   margin-left: 37.9%;
+   margin-left: 38.3%;
 }
 
 #firstName {
-   margin-left: .8vw;
+   margin-left: 3.8vw;
+   margin-right: 72.5vw;
    color: red;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-style:groove;
+   border-width: .002vw;
 }
 
 #firstname {
-
+margin-left: 7.3vw;
 }
 
 #lastname {
-   margin-left: 67vw;
-   margin-top: -6.4%;
+   margin-left: 60vw;
+   margin-top: -5.95%;
 }
 
 #lastName {
-   margin-left: 67.6vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-left: 56.5vw;
    color: red;
+   border-style: groove;
+   border-width: .002vw;
+   margin-right: 20vw;
 }
 
 #ReviewTitleCard {
@@ -342,10 +352,10 @@ margin-left: 1%;
    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    text-shadow: 2px 3px rgb(52, 54, 197);
    background: blue;
-   margin-right: 86.2vw;
+   margin-right: 87.1vw;
    color: white;
    margin-left: .3vw;
-   border-radius: 5%;
+   border-radius: 5% 15% 15% 5%;
 }
 
 #devMastHead {
@@ -413,3 +423,40 @@ select {
    border: 1px solid black;
    border-radius: 3px;
 }
+
+#profileReviewButton {
+   display: flex;
+   margin-top: -15vw;
+   margin-left: 34.2vw;
+   border-radius: 10%;
+   padding: .2vw;
+   border-style:outset;
+   background-color:white;
+   border: none;
+   color: black;
+   text-align: center;
+   font-size: 16px;
+   transition: 0.3s;
+   border-style:outset;
+}
+
+#profileReviewButton:hover {
+   transform: scale(1.10);
+   transition: transform .6s;
+   background-color: #d43e33;
+   color: white;
+   border-style: none;
+   
+}
+
+#hellaButtonIds {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: -1.5vw;
+   margin-left: 30vw;
+}
+
+#profileReviews {
+
+  }

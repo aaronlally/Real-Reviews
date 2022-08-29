@@ -10,6 +10,9 @@ function Profile({ user, setUser }) {
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
+    const [showReviews, setShowReviews] = useState(false)
+
+    const reviewShower = () => setShowReviews(prevState => !prevState)
 
 function renderNoReviews() {
   if (user.reviews.length === 0) {
@@ -21,7 +24,9 @@ function renderNoReviews() {
 }
   const renderReviews = user.reviews.map((review) => {
     return (
+     <div id="hellaButtonIds">
       <h3 id="profileReviews" >{review.content}</h3>
+      </div>
     )
   })
 
@@ -69,7 +74,6 @@ function renderNoReviews() {
             <h2 id="firstName">{user.first_name}</h2>
             <h2 id="lastname">Last Name</h2>
             <h2 id="lastName">{user.last_name}</h2>
-            {renderNoReviews()}
             <button className="profileButtons" id="profileb2" onClick={handleUpdateUser}>Edit account</button> <button id="profileb1" className="profileButtons" onClick={handleDeleteUser}>Delete account</button>
             {updateForm ? 
       <form onSubmit={handleSubmitUpdateUser}>
@@ -113,6 +117,8 @@ function renderNoReviews() {
       />
       <button type="submit">{isLoading ? "Loading..." : "Update"}</button>
   </form> : null}
+  <button id="profileReviewButton" onClick={reviewShower}>My reviews</button>
+  {showReviews ? renderNoReviews() : null}
         </div>
     )
 }
