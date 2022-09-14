@@ -9,6 +9,7 @@ import DevContainer from "./DevContainer";
 import Profile from "./Profile";
 import AddStuff from "./AddStuff"
 
+// highest level component
 function App() {
 
 const [user, setUser] = useState(null);
@@ -16,30 +17,33 @@ const [reviewList, setReviewList] = useState([])
 const [gameList, setGameList] = useState([])
 const [devList, setDevList] = useState([])
 
+// fetch devs; will run useEffect whenever devList.length changes
 useEffect(()=>{
   fetch("/developers")
   .then(response => response.json())
   .then(data => setDevList(data))
 }, [devList.length])
 
+// fetch games; will run useEffect whenever gameList.length changes
 useEffect(()=>{
     fetch("/games")
     .then(response => response.json())
     .then(data => setGameList(data))
   }, [gameList.length])
 
-
+// adds newly created game fron addStuff component to the gameList array in POST request
   function handleAddGame(newGame) {
     setGameList([...gameList, newGame])
   }
     
-
+// fetch reviews; will run useEffect whenever reviewList.length changes
     useEffect(()=>{
         fetch("/reviews")
         .then(response => response.json())
         .then(data => setReviewList(data))
       }, [reviewList.length])
 
+      // add review to reviewList array from addStuff POST request
       function handleAddReview(newReview) {
         setReviewList([...reviewList, newReview])
     }
@@ -53,14 +57,15 @@ useEffect(() => {
     }
   });
 }, []);
-
+// if user does not exist render Login component
 if (!user) return <Login setUser={setUser} />;
 
+// adds newly created developer from addStuff component POST request to devList
 function handleAddDeveloper(newDev) {
 setDevList([...devList, newDev])
 }
 
-
+// routes
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser}/>

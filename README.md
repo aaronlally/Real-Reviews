@@ -1,13 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+to run locally:
 
-Things you may want to cover:
+rails S to start server
 
-* Ruby version
+cd into client and run npm start and select a new port
+
+migrations models routes and controllers created with rails g resource
+
+* Ruby version 2.7.4
 
 * System dependencies
+faker
+bcrypt
+active_model_serializer
+sqlite
 
 * Configuration
 
