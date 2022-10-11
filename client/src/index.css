@@ -8,7 +8,7 @@
 
 input {
    caret-color: red;
-   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+   box-shadow: 8px 8px 20px #cbced1, -14px -14px 20px white;
    border-radius: 20px;
    box-sizing: border-box;
    background: #ecf0f3;
@@ -355,7 +355,7 @@ margin-left: 7.3vw;
    margin-right: 87.1vw;
    color: white;
    margin-left: .3vw;
-   border-radius: 5% 15% 15% 5%;
+   border-radius: 5%;
 }
 
 #devMastHead {
@@ -459,4 +459,16 @@ select {
 
 #profileReviews {
 
+  }
+
+  #username {
+   margin: .5%;
+  }
+
+  #password {
+   margin: .8%;
+  }
+
+  #signupSection {
+   margin-top: 10%;
   }

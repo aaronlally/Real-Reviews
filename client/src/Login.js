@@ -12,7 +12,7 @@ function Login({ setUser }) {
         <>
           <LoginForm setUser={setUser} />
           <br />
-          <center>
+          <center id="signupSection">
             Don't have an account? &nbsp;
             <button id="signUp" onClick={() => setShowLogin(false)}>
               Sign Up
