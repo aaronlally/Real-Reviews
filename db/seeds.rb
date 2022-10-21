@@ -14,15 +14,25 @@ User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name
 end
 
 blizz = Developer.create(name: "Blizzard Entertainment", founding_year: 1991)
+
 valve = Developer.create(name: "Valve Corporation", founding_year: 1996)
+
 ubisoft = Developer.create(name: "Ubisoft", founding_year: 1986)
+
 bungie = Developer.create(name: "Bungie Inc", founding_year: 1991)
+
 act = Developer.create(name: "Activision", founding_year: 1979)
+
 epic = Developer.create(name: "Epic Games", founding_year: 1991)
+
 nintendo = Developer.create(name: "Nintendo", founding_year: 1889)
+
 insom = Developer.create(name: "Insomniac Games", founding_year: 1994)
+
 independent = Developer.create(name: "Independent Developer", founding_year: 0)
+
 other = Developer.create(name: "Other", founding_year: 0)
+
 
 
 
